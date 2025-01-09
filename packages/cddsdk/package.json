@@ -1,0 +1,16 @@
+{
+  "name": "@monorepo-cdd/cddsdk",
+  "version": "1.0.0",
+  "private": true,
+  "main": "src/index.ts",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "preinstall": "npx only-allow pnpm"
+  },
+  "engines": {
+    "node": ">=10",
+    "pnpm": ">=3"
+  },
+  "license": "MIT"
+}

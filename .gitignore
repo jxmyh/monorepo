@@ -1,0 +1,4 @@
+#禁止上传目录
+node_modules
+
+pnpm-lock.yaml

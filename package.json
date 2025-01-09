@@ -1,0 +1,45 @@
+{
+  "name": "@monorepo-cdd/root",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "preinstall": "npx only-allow pnpm",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "engines": {
+    "node": ">=10",
+    "pnpm": ">=3"
+  },
+  "workspaces": [
+    "app/*",
+    "packages/*"
+  ],
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@antfu/eslint-config": "github:antfu/eslint-config",
+    "@types/lodash": "^4.17.14",
+    "@types/node": "^22.10.5",
+    "@vant/auto-import-resolver": "^1.2.1",
+    "@vitejs/plugin-vue": "^5.2.1",
+    "eslint": "^9.17.0",
+    "eslint-plugin-format": "^1.0.1",
+    "fs": "0.0.1-security",
+    "path": "^0.12.7",
+    "tslint": "^6.1.3",
+    "typescript": "^5.7.3",
+    "unplugin-auto-import": "^19.0.0",
+    "unplugin-vue-components": "^28.0.0",
+    "vite": "^6.0.7"
+  },
+  "dependencies": {
+    "@vueuse/core": "^12.3.0",
+    "lodash": "^4.17.21",
+    "sass": "^1.83.1",
+    "vant": "^4.9.15",
+    "vue": "^3.5.13"
+  }
+}
