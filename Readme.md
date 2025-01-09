@@ -5,12 +5,12 @@
 - vite
 - vue
 - vant
-- vueuse
+- vueuse 
 - sass
 
 ### 仓库功能
 
-- ~~自动导入~~ 222
+- ~~自动导入~~
 - 多入口
 - 打包
 - `cli`开发
