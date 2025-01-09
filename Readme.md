@@ -5,7 +5,7 @@
 - vite
 - vue
 - vant
-- vueuse
+- vueuse 
 - sass
 
 ### 仓库功能
