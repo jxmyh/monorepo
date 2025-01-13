@@ -22,7 +22,6 @@ export default antfu(
       "./vite-env.d.ts",
       "types/*.d.ts",
       "./*.ts",
-      "types/auto-imports.d.ts", // 引入auto-import.d.ts文件
     ],
 
     typescript: true,
