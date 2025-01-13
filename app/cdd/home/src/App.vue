@@ -1,25 +1,29 @@
 <template>
   <div>home1</div>
   <text-hello></text-hello>
+  <text-j></text-j>
+  <text-t />
   <h3>
-      Counter: {{count}}
-      <a @click='inc()' style='margin-right:10px'>+</a>
-      <a @click='dec()'>-</a>
-    </h3>
+    Counter: {{ count }}
+    <a @click='inc()' style='margin-right:10px'>+</a>
+    <a @click='dec()'>-</a>
+  </h3>
   <van-button type="primary">默认按钮</van-button>
 </template>
 
 <script setup lang="ts">
+// import TextJ from './components/TextJ.jsx'
+// import TextT from './components/TextT.tsx'
 import dayjs from 'dayjs'
 import { add } from '@monorepo-cdd/cddsdk'
 
 
 
-const mouse = reactive(useMouse()) 
+const mouse = reactive(useMouse())
 
 const obj = {
   a: {
-    b:1
+    b: 1
   }
 }
 
@@ -38,6 +42,4 @@ const b = ref(1)
 
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>

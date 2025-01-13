@@ -6,16 +6,26 @@
     "moduleResolution": "node",
     "strict": true,
     "jsx": "preserve",
+    "jsxImportSource": "vue",
     "sourceMap": true,
     "resolveJsonModule": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-    "lib": ["esnext", "dom"],
+    "lib": [
+      "esnext",
+      "dom"
+    ],
     "baseUrl": ".",
     "paths": {
-      "@assets/*":["assets/*"],
-      "@utils/*":["utils/*"],
-      "@common/*":["common/*"],
+      "@assets/*": [
+        "assets/*"
+      ],
+      "@utils/*": [
+        "utils/*"
+      ],
+      "@common/*": [
+        "common/*"
+      ],
     }
   },
   "include": [
@@ -25,8 +35,7 @@
     "src/**/*.d.ts",
     "src/**/*.tsx",
     "src/**/*.vue",
-    "types/images.d.ts",
-    "types/auto-imports.d.ts" 
+    "types/*.d.ts"
   ],
   "references": [
     {

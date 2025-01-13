@@ -9,7 +9,7 @@ const usePublicHtml: Plugin = {
     // 在开发服务器中间件中拦截请求
     server.middlewares.use((req, res, next) => {
       const url = req.url || '';
-      if (url === '/' || url === '/index.html') {
+      if (url === '/' || url.indexOf('.html') != -1 || url.indexOf('.php') != -1) {
         const htmlPath = path.resolve(__dirname, '../public/index.html');
         fs.readFile(htmlPath, (err, data) => {
           if (err) {
