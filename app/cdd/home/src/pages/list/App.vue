@@ -1,14 +1,18 @@
 <template>
+<<<<<<< Updated upstream:app/cdd/home/src/App.vue
   <div>home1</div>
   <text-hello></text-hello>
   <text-j></text-j>
   <text-t />
+=======
+  <div>list</div>
+>>>>>>> Stashed changes:app/cdd/home/src/pages/list/App.vue
   <h3>
     Counter: {{ count }}
     <a @click='inc()' style='margin-right:10px'>+</a>
     <a @click='dec()'>-</a>
   </h3>
-  <van-button type="primary">默认按钮</van-button>
+  <van-button type="primary" @click.prevent="handlerBackHome">默认按钮</van-button>
 </template>
 
 <script setup lang="ts">
@@ -39,6 +43,10 @@ console.log(obj?.a?.b)
 
 const b = ref(1)
 
+
+const handlerBackHome = () => {
+  window.location.href = 'home.html'
+}
 
 </script>
 
