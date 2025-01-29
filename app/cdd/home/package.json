@@ -5,9 +5,13 @@
   "private": true,
   "scripts": {
     "dev": "vite",
+    "build": "pnpm clean && vite build",
+    "build:prod": "pnpm clean && vite build --mode prod",
+    "preview": "vite preview",
     "preinstall": "npx only-allow pnpm",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint:fix": "eslint . --fix",
+    "clean": "rimraf dist"
   },
   "engines": {
     "node": ">=10",
