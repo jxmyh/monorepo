@@ -5,33 +5,29 @@ function __vite_legacy_guard() {
   })().next();
 }
 ;
-import { d as defineComponent, r as reactive, f as useMouse, g as add, h as useCounter, l as lodashExports, i as dayjs, j as ref, b as createElementBlock, e as createBaseVNode, a as createTextVNode, t as toDisplayString, u as unref, c as createVNode, w as withCtx, k as withModifiers, F as Fragment, B as Button, o as openBlock, m as createApp } from "./public/lodash.BzrmGred.js";
+import { d as defineComponent, r as reactive, u as useMouse, a as useCounter, b as dayjs, c as ref, e as createElementBlock, f as createBaseVNode, g as createVNode, h as createTextVNode, t as toDisplayString, i as unref, w as withCtx, j as withModifiers, F as Fragment, B as Button, o as openBlock, _ as _sfc_main$1, T as TextJ, l as __unplugin_components_2, m as createApp } from "./public/index-C8y7w2kA.js";
 const _sfc_main = /* @__PURE__ */ defineComponent({
   __name: "App",
   setup(__props) {
-    var _a;
     reactive(useMouse());
-    const obj = {
-      a: {
-        b: 1
-      }
-    };
-    console.log(add(1, 3));
     useMouse();
     const { count, inc, dec } = useCounter();
-    const a = lodashExports._.cloneDeep(count.value);
-    console.log(a);
-    const now = dayjs();
-    console.log(now.format("DD/MM/YYYY"));
-    console.log((_a = obj == null ? void 0 : obj.a) == null ? void 0 : _a.b);
+    _.cloneDeep(count.value);
+    dayjs();
     ref(1);
     const handlerBackHome = () => {
       window.location.href = "home.html";
     };
     return (_ctx, _cache) => {
+      const _component_text_hello = _sfc_main$1;
+      const _component_text_j = TextJ;
+      const _component_text_t = __unplugin_components_2;
       const _component_van_button = Button;
       return openBlock(), createElementBlock(Fragment, null, [
-        _cache[3] || (_cache[3] = createBaseVNode("div", null, "list", -1)),
+        _cache[3] || (_cache[3] = createBaseVNode("div", null, "home1", -1)),
+        createVNode(_component_text_hello),
+        createVNode(_component_text_j),
+        createVNode(_component_text_t),
         createBaseVNode("h3", null, [
           createTextVNode(" Counter: " + toDisplayString(unref(count)) + " ", 1),
           createBaseVNode("a", {
@@ -60,3 +56,4 @@ app.mount("#app");
 export {
   __vite_legacy_guard
 };
+//# sourceMappingURL=list-Dhb3y8Wm.js.map

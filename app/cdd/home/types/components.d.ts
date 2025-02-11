@@ -8,6 +8,8 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     TextHello: typeof import('./../src/components/TextHello.vue')['default']
+    TextJ: typeof import('./../src/components/TextJ.jsx')['default']
+    TextT: typeof import('./../src/components/TextT.tsx')['default']
     VanButton: typeof import('vant/es')['Button']
   }
 }

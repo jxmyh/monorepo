@@ -1,12 +1,8 @@
 <template>
-<<<<<<< Updated upstream:app/cdd/home/src/App.vue
   <div>home1</div>
   <text-hello></text-hello>
   <text-j></text-j>
   <text-t />
-=======
-  <div>list</div>
->>>>>>> Stashed changes:app/cdd/home/src/pages/list/App.vue
   <h3>
     Counter: {{ count }}
     <a @click='inc()' style='margin-right:10px'>+</a>

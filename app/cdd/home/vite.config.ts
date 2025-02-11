@@ -8,6 +8,7 @@ import { VantResolver } from '@vant/auto-import-resolver';
 import legacyPlugin from '@vitejs/plugin-legacy';
 
 import viteUsePublicHtml from './config/viteUsePublicHtml';
+import vitePluginHtmlToPhp from './config/vitePluginHtmlToPhp';
 import path from 'path';
 
 // mpa
@@ -44,8 +45,8 @@ export default defineConfig(({ command, mode }) => {
             axios: [
               // default imports
               ['default', 'axios'] // import { default as axios } from 'axios',
-            ],
-            lodash: [['_']]
+            ]
+            // lodash: [['_']]
             // 'dayjs': [
             //   ['dayjs']
             // ]
@@ -80,17 +81,19 @@ export default defineConfig(({ command, mode }) => {
         ]
       }),
       createMpaPlugin({
-        template: 'public/index.html',
+        htmlMinify: true,
+        template: `public/index.html`,
         scanOptions: {
           scanDirs: 'src/pages',
           entryFile: 'main.ts',
-          filename: (name) => `${name}.${command == 'build' ? 'html' : 'html'}`
+          filename: (name) => `${name}.html`
         }
       }),
       legacyPlugin({
         renderLegacyChunks: true, // 开启传统浏览器polyfill
         polyfills: true // 针对传统浏览器的polyfill，采用默认的规则
-      })
+      }),
+      vitePluginHtmlToPhp()
     ],
     resolve: {
       alias: {
@@ -98,36 +101,6 @@ export default defineConfig(({ command, mode }) => {
         '@utils': path.join(__dirname, 'utils'),
         '@common': path.join(__dirname, 'common')
       }
-<<<<<<< Updated upstream
-    }),
-    Components({
-      dts: './types/components.d.ts',
-      resolvers: [VantResolver()],
-      include: [
-        /\.[tj]sx?$/, // .ts, .tsx, .js, .jsx
-        /\.vue$/,
-        /\.vue\?vue/, // .vue
-        /\.md$/ // .md
-      ]
-    }),
-    legacyPlugin({
-      renderLegacyChunks: true, // 开启传统浏览器polyfill
-      polyfills: true // 针对传统浏览器的polyfill，采用默认的规则
-    })
-  ],
-  resolve: {
-    alias: {
-      '@assets': path.join(__dirname, 'assets'),
-      '@utils': path.join(__dirname, 'utils'),
-      '@common': path.join(__dirname, 'common')
-    }
-  },
-  publicDir: 'src/assets/',
-  build: {
-    rollupOptions: {
-      input: {
-        main: 'public/index.html'
-=======
     },
     publicDir: 'assets/'
   } satisfies UserConfig;
@@ -140,7 +113,7 @@ export default defineConfig(({ command, mode }) => {
         // 生成manifest文件，用于缓存控制
         manifest: true,
         outDir: 'dist',
-        target: 'es2015',
+        // target: 'es2015',
         minify: `${mode == 'production' ? false : true}`,
         emptyOutDir: true,
         sourcemap,
@@ -149,24 +122,24 @@ export default defineConfig(({ command, mode }) => {
         copyPublicDir: false,
         rollupOptions: {
           output: {
-            // 禁用 source map
-            sourcemap,
             // 将js由assets目录转为js目录
-            entryFileNames: 'js/[name]-[hash].js',
+            entryFileNames: 'js/[name]-[hash:8].js',
             // 将公用的js转至js/public目录下
-            chunkFileNames: 'js/public/[name].[hash].js',
+            chunkFileNames: 'js/public/[name]-[hash:8].js',
             // 针对静态资源 css
             assetFileNames: (assetInfo) => {
               if (/\.(png|jpg|jpeg|gif|svg)$/.test(assetInfo.name)) {
-                return 'img/[name].[hash].[ext]';
+                return 'img/[name]-[hash:8].[ext]';
               } else if (/\.css$/.test(assetInfo.name)) {
-                return 'css/[name].[hash].css';
+                return '[ext]/[name]-[hash:8][extname]';
               }
               return assetInfo.name;
             }
           }
         }
->>>>>>> Stashed changes
+      },
+      esbuild: {
+        drop: mode == 'production' ? ['console', 'debugger'] : []
       }
     };
   }
