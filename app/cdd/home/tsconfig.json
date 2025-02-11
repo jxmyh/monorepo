@@ -26,7 +26,12 @@
       "@common/*": [
         "common/*"
       ],
-    }
+    },
+    "types": [
+      "node",
+      "vite/client",
+      "vant/typings/global"
+    ]
   },
   "include": [
     "config/**/*.ts",

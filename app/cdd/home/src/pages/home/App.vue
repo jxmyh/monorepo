@@ -33,8 +33,8 @@ const obj = {
 console.log(add(1, 3))
 const { x, y } = useMouse()
 const { count, inc, dec } = useCounter()
-const a = _.cloneDeep(count.value);
-console.log(a)
+// const a = _.cloneDeep(count.value);
+// console.log(a)
 const now = dayjs()
 console.log(now.format('DD/MM/YYYY'))
 

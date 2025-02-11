@@ -1,79 +1,83 @@
 {
-  "_lodash-legacy.YlbdZVlh.js": {
-    "file": "js/public/lodash-legacy.YlbdZVlh.js",
-    "name": "lodash"
+  "_index-B621UpuL.css": {
+    "file": "css/index-B621UpuL.css",
+    "src": "_index-B621UpuL.css"
   },
-  "_lodash.69dAW1E2.css": {
-    "file": "css/lodash.69dAW1E2.css",
-    "src": "_lodash.69dAW1E2.css"
-  },
-  "_lodash.BzrmGred.js": {
-    "file": "js/public/lodash.BzrmGred.js",
-    "name": "lodash",
+  "_index-C8y7w2kA.js": {
+    "file": "js/public/index-C8y7w2kA.js",
+    "name": "index",
     "css": [
-      "css/lodash.69dAW1E2.css"
+      "css/index-B621UpuL.css"
+    ],
+    "assets": [
+      "img/banner@2x-CytXxbee.png"
+    ]
+  },
+  "_index-legacy-D9Q-tWd5.js": {
+    "file": "js/public/index-legacy-D9Q-tWd5.js",
+    "name": "index",
+    "assets": [
+      "img/banner@2x-CytXxbee.png"
     ]
   },
   "assets/banner@2x.png": {
-    "file": "img/banner@2x.CytXxbee.png",
+    "file": "img/banner@2x-CytXxbee.png",
     "src": "assets/banner@2x.png"
   },
   "home-legacy.html": {
-    "file": "js/home-legacy-Dj1Cgb40.js",
+    "file": "js/home-legacy-CL2_38FJ.js",
     "name": "home",
     "src": "home-legacy.html",
     "isEntry": true,
     "imports": [
-      "_lodash-legacy.YlbdZVlh.js"
+      "_index-legacy-D9Q-tWd5.js"
     ],
     "assets": [
-      "img/banner@2x.CytXxbee.png",
-      "img/pic_3@2x.aSf0KT3U.png"
+      "img/pic_3@2x-aSf0KT3U.png"
     ]
   },
   "home.html": {
-    "file": "js/home-4saSDvOI.js",
+    "file": "js/home-BS5LFKJE.js",
     "name": "home",
     "src": "home.html",
     "isEntry": true,
     "imports": [
-      "_lodash.BzrmGred.js"
+      "_index-C8y7w2kA.js"
     ],
     "css": [
-      "css/home.BzPxVIQs.css"
+      "css/home-C3d9fkX5.css"
     ],
     "assets": [
-      "img/banner@2x.CytXxbee.png",
-      "img/pic_3@2x.aSf0KT3U.png"
+      "img/pic_3@2x-aSf0KT3U.png"
     ]
   },
   "list-legacy.html": {
-    "file": "js/list-legacy-Bb5gCar5.js",
+    "file": "js/list-legacy-CV4dznqr.js",
     "name": "list",
     "src": "list-legacy.html",
     "isEntry": true,
     "imports": [
-      "_lodash-legacy.YlbdZVlh.js"
+      "_index-legacy-D9Q-tWd5.js"
     ]
   },
   "list.html": {
-    "file": "js/list-1fjlLPW9.js",
+    "file": "js/list-Dhb3y8Wm.js",
     "name": "list",
     "src": "list.html",
     "isEntry": true,
     "imports": [
-      "_lodash.BzrmGred.js"
+      "_index-C8y7w2kA.js"
     ],
     "css": [
-      "css/list.nZhckvUG.css"
+      "css/list-gjFYp0Cy.css"
     ]
   },
   "src/assets/pic_3@2x.png": {
-    "file": "img/pic_3@2x.aSf0KT3U.png",
+    "file": "img/pic_3@2x-aSf0KT3U.png",
     "src": "src/assets/pic_3@2x.png"
   },
   "vite/legacy-polyfills-legacy": {
-    "file": "js/polyfills-legacy-b6i5WDEE.js",
+    "file": "js/polyfills-legacy-D0_aSDn7.js",
     "name": "polyfills",
     "src": "vite/legacy-polyfills-legacy",
     "isEntry": true

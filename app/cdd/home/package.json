@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "vite",
     "build": "pnpm clean && vite build",
-    "build:prod": "pnpm clean && vite build --mode prod",
+    "build:html": "pnpm clean && vite build -- --suffix html",
+    "prod": "pnpm clean && vite build --mode production",
+    "prod:html": "pnpm clean && vite build -- --suffix html --mode production",
     "preview": "vite preview",
     "preinstall": "npx only-allow pnpm",
     "lint": "eslint .",
